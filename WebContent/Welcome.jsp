@@ -10,32 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String loginId = request.getParameter("loginId");
-		String password = request.getParameter("password");
-		String dob = request.getParameter("dob");
-		String address = request.getParameter("address");
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+<%@include file="Header.jsp" %>
+	<h1>Welcome View</h1>
 
-		UserBean bean = new UserBean();
-		bean.setFirstName(firstName);
-		bean.setLastName(lastName);
-		bean.setLoginId(loginId);
-		bean.setPassword(password);
-		bean.setDob(sdf.parse(dob));
-		bean.setAddress(address);
-
-		UserModel model = new UserModel();
-		model.add(bean);
-	%>
-	<h1><%=firstName%></h1>
-	<h1><%=lastName%></h1>
-	<h1><%=loginId%></h1>
-	<h1><%=password%></h1>
-	<h1><%=dob%></h1>
-	<h1><%=address%></h1>
 
 </body>
 </html>

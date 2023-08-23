@@ -36,9 +36,9 @@ public class TestUser {
 
 		UserBean bean = new UserBean();
 
-		bean.setFirstName("rohan");
+		bean.setFirstName("annu");
 		bean.setLastName("meena");
-		bean.setLoginId("annu@gmail.com");
+		bean.setLoginId("annuu@gmail.com");
 		bean.setPassword("12334445");
 		bean.setDob(sdf.parse(dob));
 		bean.setAddress("indore");
@@ -52,7 +52,7 @@ public class TestUser {
 		UserBean bean = new UserBean();
 		bean.setId(1);
 		UserModel model = new UserModel();
-		List list = model.search(bean);
+		List list = model.search(bean, 0, 0);
 
 		Iterator it = list.iterator();
 
